@@ -13,7 +13,8 @@ class BubbleSort:
                 else:
                     return self.__sort(unsorted_list, last_index)
             if unsorted_list[index] > unsorted_list[next_index]:
-                swap_value = unsorted_list[index]
-                unsorted_list[index] = unsorted_list[next_index]
-                unsorted_list[next_index] = swap_value
+                unsorted_list[index], unsorted_list[next_index] = (
+                    unsorted_list[next_index],
+                    unsorted_list[index]
+                )
                 swaps += 1
