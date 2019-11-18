@@ -1,5 +1,5 @@
-from binary_search import BinarySearch
-from selection_sort import SelectionSort
+from algorithms.binary_search import BinarySearch
+from algorithms.selection_sort import SelectionSort
 
 binary_client = BinarySearch()
 selection_client = SelectionSort()
