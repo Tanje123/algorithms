@@ -2,7 +2,7 @@ from typing import List
 
 
 class BinarySearch:
-    sorted_list = []
+    __sorted_list = []
 
     def binary_search(self, sorted_list: List, key: any):
         """
@@ -13,7 +13,7 @@ class BinarySearch:
         """
         first_element = 0
         last_element = (len(sorted_list)) - 1
-        self.sorted_list = sorted_list
+        self.__sorted_list = sorted_list
 
         return self.__binary_search(
             first_element,
@@ -33,11 +33,11 @@ class BinarySearch:
         if last_element == -1 or sub_list_size == -1:
             return -1
 
-        if self.sorted_list[pointer] == key:
+        if self.__sorted_list[pointer] == key:
             return pointer
-        if key > self.sorted_list[pointer]:
+        if key > self.__sorted_list[pointer]:
             return self.__binary_search(pointer + 1, last_element, key)
-        elif key < self.sorted_list[pointer]:
+        elif key < self.__sorted_list[pointer]:
             return self.__binary_search(0, pointer - 1, key)
 
         return -1
