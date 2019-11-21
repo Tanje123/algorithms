@@ -1,4 +1,5 @@
 from algorithms.binary_search import BinarySearch
+from algorithms.bogo_sort import BogoSort
 from algorithms.bubble_sort import BubbleSort
 from algorithms.counting_sort import CountingSort
 from algorithms.heap_sort import HeapSort
@@ -22,6 +23,7 @@ insertion_client = InsertionSort()
 heap_client = HeapSort()
 radix_client = RadixSort()
 counting_client = CountingSort()
+bogo_client = BogoSort()
 
 print("Binary search: ")
 sorted_list = [1, 2, 6]
@@ -68,4 +70,14 @@ unsorted_counting_list = [9, 4, 10, 8, 2, 4]
 print("Counting sort: ")
 print("Input: " + str(unsorted_counting_list))
 print("Output: " + str(counting_client.sort(unsorted_counting_list)))
+print()
+
+"""
+Educational sort should not be used in real life. Using this sort could
+lead to an infinite loop.
+"""
+unsorted_bogo_sort = [3, 2, 1]
+print("Bogo sort: ")
+print("Input: " + str(unsorted_bogo_sort))
+print("Output: " + str(bogo_client.sort(unsorted_bogo_sort)))
 print()
