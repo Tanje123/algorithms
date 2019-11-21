@@ -9,3 +9,4 @@ Current working algorithms:
 - Heap sort
 - Radix sort
 - Counting sort
+- Bogo sort (Should not be used in real life.)
