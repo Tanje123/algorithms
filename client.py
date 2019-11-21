@@ -1,5 +1,6 @@
 from algorithms.binary_search import BinarySearch
 from algorithms.bubble_sort import BubbleSort
+from algorithms.counting_sort import CountingSort
 from algorithms.heap_sort import HeapSort
 from algorithms.insertion_sort import InsertionSort
 from algorithms.radix_sort import RadixSort
@@ -20,6 +21,7 @@ bubble_client = BubbleSort()
 insertion_client = InsertionSort()
 heap_client = HeapSort()
 radix_client = RadixSort()
+counting_client = CountingSort()
 
 print("Binary search: ")
 sorted_list = [1, 2, 6]
@@ -60,4 +62,10 @@ unsorted_radix_list = [10, 15, 1, 60, 5, 100, 25, 50]
 print("Radix sort: ")
 print("Input: " + str(unsorted_radix_list))
 print("Output: " + str(radix_client.sort(unsorted_radix_list)))
+print()
+
+unsorted_counting_list = [9, 4, 10, 8, 2, 4]
+print("Counting sort: ")
+print("Input: " + str(unsorted_counting_list))
+print("Output: " + str(counting_client.sort(unsorted_counting_list)))
 print()
