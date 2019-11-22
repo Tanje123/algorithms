@@ -13,6 +13,7 @@ class BeadSort:
     def __sort(self):
         falls = 0
         last_index = len(self.__bead_list) - 1
+        self.__visualise()
         for index, value in enumerate(self.__bead_list):
             if index == last_index and falls == 0:
                 return self.__bead_list
@@ -24,3 +25,9 @@ class BeadSort:
                 self.__bead_list[index] -= value
                 self.__bead_list[next_index] += value
                 falls += 1
+
+    def __visualise(self):
+        print("Iteration:")
+        for value in self.__bead_list:
+            print(" 0 " * value)
+        print()
