@@ -1,3 +1,4 @@
+from algorithms.bead_sort import BeadSort
 from algorithms.binary_search import BinarySearch
 from algorithms.bogo_sort import BogoSort
 from algorithms.bubble_sort import BubbleSort
@@ -24,6 +25,7 @@ heap_client = HeapSort()
 radix_client = RadixSort()
 counting_client = CountingSort()
 bogo_client = BogoSort()
+bead_client = BeadSort()
 
 print("Binary search: ")
 sorted_list = [1, 2, 6]
@@ -76,8 +78,18 @@ print()
 Educational sort should not be used in real life. Using this sort could
 lead to an infinite loop.
 """
-unsorted_bogo_sort = [3, 2, 1]
+unsorted_bogo_list = [3, 2, 1]
 print("Bogo sort: ")
-print("Input: " + str(unsorted_bogo_sort))
-print("Output: " + str(bogo_client.sort(unsorted_bogo_sort)))
+print("Input: " + str(unsorted_bogo_list))
+print("Output: " + str(bogo_client.sort(unsorted_bogo_list)))
+print()
+
+
+"""
+This sorting method can only take in positive numbers.
+"""
+unsorted_bead_list = [7, 2, 1, 4, 2]
+print("Bead sort: ")
+print("Input: " + str(unsorted_bead_list))
+print("Output: " + str(bead_client.sort(unsorted_bead_list)))
 print()
