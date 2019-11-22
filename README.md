@@ -10,3 +10,4 @@ Current working algorithms:
 - Radix sort
 - Counting sort
 - Bogo sort (Should not be used in real life.)
+- Bead/Gravity sort
